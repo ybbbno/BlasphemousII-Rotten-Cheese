@@ -37,16 +37,20 @@ namespace rotten_cheese
 
             Main.rotten_cheese.FileHandler.LoadDataAsSprite("cheese.png", 23, new Vector2(0, 0), true, out Sprite rooten_cheese_sprite);
 
-            Log(rooten_cheese_sprite ? rooten_cheese_sprite.ToString() : null);
+            Log("Rotten Cheese Sprite was created:" + rooten_cheese_sprite.ToString());
 
             foreach(var child_flask in flask_ui_bar.childFlask){
+                /*
                 foreach(var empty in child_flask.upgradeImagesEmpty){
                     Log(empty.ToString());
                 }
+                */
                 for(int i = 0; i < child_flask.upgradeImagesFill.Count(); i++){
                     child_flask.upgradeImagesFill[i] = rooten_cheese_sprite;
                 }
             }
+
+            Log("All sprites was successfully modified");
             
             /*
             Il2CppTGK.Game.Components.FadeImage flask_warning_fade = flask_ui_bar.noFlaskWarningFade;
