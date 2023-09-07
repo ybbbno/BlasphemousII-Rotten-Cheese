@@ -43,7 +43,7 @@
 
     <!-- Copy plugin & resources to development folder -->
     <PropertyGroup>
-      <DevFolder>D:\programs\Steam\steamapps\common\Blasphemous 2\Modding\</DevFolder>
+      <DevFolder>D:\soft\Steam\steamapps\common\Blasphemous 2\Modding\</DevFolder>
     </PropertyGroup>
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DevFolder)plugins" />
     <Copy SourceFiles="@(Config)" DestinationFolder="$(DevFolder)config" />
