@@ -18,7 +18,9 @@ namespace rotten_cheese
 
         protected override void OnSceneLoaded(string sceneName)
         {
-            FlaskChanger.ChangeUIFlaskSprite("cheese.png", 23, "cheese.png", 23);
+            FlaskChanger.ChangeUIFillFlaskSprite("cheese.png", 23, "cheese.png", 23, "cheese.png", 23, "cheese.png", 23);
+            FlaskChanger.ChangeUIEmptyFlaskSprite("empty_cheese.png", 23, "empty_cheese.png", 23, "empty_cheese.png", 23, "empty_cheese.png", 23);
+            FlaskChanger.ChangeUINoFlaskWarningSprite("white_cheese.png", 23, "white_cheese.png", 23, "white_cheese.png", 23, "white_cheese.png", 23);
 
             Log("All sprites was successfully modified");
 
