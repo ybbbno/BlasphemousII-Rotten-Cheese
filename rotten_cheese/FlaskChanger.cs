@@ -18,7 +18,7 @@ namespace rotten_cheese {
         private static Il2CppReferenceArray<Sprite> _empty_sprites = new Il2CppReferenceArray<Sprite>(4);
         public static Il2CppReferenceArray<Sprite> empty_sprites { get {return _empty_sprites;} }
         private static Il2CppReferenceArray<Sprite> _warning_sprites = new Il2CppReferenceArray<Sprite>(4);
-        public static Il2CppReferenceArray<Sprite> warning_sprite { get {return _warning_sprites;} }
+        public static Il2CppReferenceArray<Sprite> warning_sprites { get {return _warning_sprites;} }
         private static void FoundObjects(){
             _ingame_flask_object = GameObject.Find("Flask");
             _ingame_flask_ui_bar = _ingame_flask_object.GetComponent<UIFlaskBar>();
@@ -83,17 +83,18 @@ namespace rotten_cheese {
 
             Main.rotten_cheese.FileHandler.LoadDataAsSprite(upgrade_0_file_path, upgrade_0_image_size, new Vector2(0, 0), true, out _sprite);
             _warning_sprites[0] = _sprite;
-            
+
             Main.rotten_cheese.FileHandler.LoadDataAsSprite(upgrade_1_file_path, upgrade_1_image_size, new Vector2(0, 0), true, out _sprite);
             _warning_sprites[1] = _sprite;
 
             Main.rotten_cheese.FileHandler.LoadDataAsSprite(upgrade_2_file_path, upgrade_2_image_size, new Vector2(0, 0), true, out _sprite);
             _warning_sprites[2] = _sprite;
-            
+
             Main.rotten_cheese.FileHandler.LoadDataAsSprite(upgrade_3_file_path, upgrade_3_image_size, new Vector2(0, 0), true, out _sprite);
             _warning_sprites[3] = _sprite;
 
             _ingame_flask_ui_bar.noFlaskWarning.upgradeImagesEmpty = _warning_sprites;
+
         }
     }
 }
